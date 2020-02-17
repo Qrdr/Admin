@@ -1,0 +1,15 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			Current Orders
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list lines="none">
+		<div *ngFor="let currentOrder of currentOrders$ | async">
+			<app-order-card [order]="currentOrder"></app-order-card>
+		</div>
+	</ion-list>
+</ion-content>
